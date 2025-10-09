@@ -1,0 +1,17 @@
+input[type="text"]
+{
+    background-color: blue;
+}
+::placeholder
+{
+    color: blanchedalmond;
+}
+input[type="password"]
+{
+
+    background-color: coral;
+}
+input[type="Email"]
+{
+    background-color: crimson;
+}
