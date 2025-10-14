@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .profile-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      margin: 20px;
+      padding: 20px; 
+      text-align: center;
+    }
+
+    .profile-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .profile-name {
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+
+    .profile-title {
+      color: #888;
+      margin-bottom: 15px;
+    }
+
+    .profile-description {
+      font-size: 0.95em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile-card">
+    <img src="https://via.placeholder.com/100" alt="Profile Photo" class="profile-image">
+    <div class="profile-name">Jane Doe</div>
+    <div class="profile-title">Web Developer</div>
+    <div class="profile-description">
+      Passionate about creating beautiful and responsive web experiences. Loves coding and coffee.
+    </div>
+  </div>
+
+</body>
+</html>
