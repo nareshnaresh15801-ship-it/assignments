@@ -1,0 +1,43 @@
+span{
+    height: 50px;
+    width: 100px;
+    border: 5px solid color(srgb red green blue);
+    margin: 30px;
+    padding: 10px;
+    display:block ;
+}
+p{
+    border: 50px solid black;
+    background-color: solid seagreen;
+    text-align: center;
+    display:inline;
+    margin-bottom: 60px;
+    padding: 10px;
+
+}
+
+h1{
+    text-align: center;
+    font-size:large;
+    color: rgb(255, 0, 204);
+    font-weight: 500;
+    background-color: rgb(128, 255, 0);
+}
+.inlineblock{
+    text-align: center;
+    color: rgb(47, 123, 255);
+    font-size: large;
+    font-weight: 400;
+    background-color: darkgrey;
+    text-transform: capitalize;
+}
+.inlineblock{
+    display: block;
+    padding: 10px;
+    margin-top: 150px;
+}
+h2{
+    text-align: center;
+    color: darkred;
+    background-color: lightblue;
+}
