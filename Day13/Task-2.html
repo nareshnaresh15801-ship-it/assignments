@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Layout</title>
+    <style>
+        container{
+        display:flex;
+        gap:20px
+
+    }
+    .column{
+        flex:1x;
+        background-color: aqua;
+        padding: 20px;
+        text-align: center;
+        
+    }
+    @media (max-width:600px);{
+    .container{
+        flex-direction:column;
+
+    }
+        
+    }
+    
+
+
+    </style>
+</head>
+<body>
+    
+   <div class="container">
+    <div class="Column">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor veritatis voluptas ipsam qui voluptates perferendis voluptatibus ullam! Placeat dicta voluptates odio, aspernatur deleniti quasi odit inventore nemo tempore, accusamus consequuntur?
+        <div class="column"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae eos nobis voluptas maxime, asperiores autem accusamus quaerat suscipit possimus rem quis nostrum, tempore itaque earum est ipsam mollitia id laborum.
+            
+        </div>
+
+   
+    
+</body>
+</html>
