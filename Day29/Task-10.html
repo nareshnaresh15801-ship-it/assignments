@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Toggler</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        .answer {
+            display: none;   
+            margin-top: 10px;
+            padding: 10px;
+            background: #e8f8e8;
+            border-left: 4px solid #2ecc71;
+        }
+
+        .question {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="question">Q1: What is the capital of India?</div>
+    <button class="showBtn">Show Answer</button>
+    <button class="hideBtn">Hide Answer</button>
+    <div class="answer">Answer: New Delhi</div>
+
+    <script>
+        $(".showBtn").click(function () {
+            $(".answer").show(300);
+        });
+        $(".hideBtn").click(function () {
+            $(".answer").hide(300);
+        });
+    </script>
+
+</body>
+</html>

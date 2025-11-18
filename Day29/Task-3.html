@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Image with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <button id="toggleBtn">Toggle Image</button>
+
+    <br><br>
+
+    <img id="myImage" src="./d1ed8400-5793-4ecd-b406-bf854f8f8fca-Mahindra_Thar_Roxx_Front-Grille.avif" alt="Sample Image" height="200px" width="200px">
+
+    <script>
+        $("#toggleBtn").click(function () {
+            $("#myImage").toggle();    
+        });
+    </script>
+
+</body>
+</html>

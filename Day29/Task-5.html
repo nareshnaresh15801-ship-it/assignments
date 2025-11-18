@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Toggle Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <button id="slideBtn">Slide Toggle</button>
+
+    <br><br>
+
+    <div id="box" style="width:300px; height:150px; background:lightblue; display:none;">
+        This box will slide up and down. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat accusamus animi quasi ratione repellat laudantium? Iure quaerat illo sequi, vel similique nemo sed esse libero? Quidem pariatur cum quasi maxime!
+    </div>
+
+    <script>
+        $("#slideBtn").click(function () {
+            $("#box").slideToggle(900); 
+        });
+    </script>
+
+</body>
+</html>

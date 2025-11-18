@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade Photo Gallery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        #gallery img {
+            width: 900px;
+            height: 1000;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Photo Gallery</h2>
+
+    <div id="gallery">
+        <img src="./01eeafa8-4a73-4437-9bab-167dbcbbba5d_tharroxx.avif" class="photo">
+        <img src="./d1ed8400-5793-4ecd-b406-bf854f8f8fca-Mahindra_Thar_Roxx_Front-Grille.avif" class="photo">
+        <img src="./mahindra-thar-roxx-212046376-3x4.webp" class="photo">
+    </div>
+
+    <br>
+
+    <button id="prevBtn">Previous</button>
+    <button id="nextBtn">Next</button>
+
+    <script>
+        let current = 0;
+        const photos = $(".photo");
+
+        photos.eq(current).fadeIn();
+
+        $("#nextBtn").click(function () {
+            photos.eq(current).fadeOut(300, function () {
+                current = (current + 1) % photos.length;
+                photos.eq(current).fadeIn(300);
+            });
+        });
+
+        $("#prevBtn").click(function () {
+            photos.eq(current).fadeOut(300, function () {
+                current = (current - 1 + photos.length) % photos.length;
+                photos.eq(current).fadeIn(300);
+            });
+        });
+    </script>
+
+</body>
+</html>

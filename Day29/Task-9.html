@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            min-height: 400px;
+            padding: 50px;
+            opacity: 0;                  
+            transition: opacity 1s ease; 
+        }
+
+        .visible {
+            opacity: 1 !important;
+        }
+
+        nav {
+            padding: 15px;
+            background: #222;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+        
+        nav button {
+            margin-right: 15px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <button class="nav-btn" data-target="#about">About</button>
+        <button class="nav-btn" data-target="#projects">Projects</button>
+        <button class="nav-btn" data-target="#contact">Contact</button>
+    </nav>
+
+    <section id="about" style="background:#f4f4f4;">
+        <h2>About Me</h2>
+        <p>This is the about section of the portfolio.</p>
+    </section>
+
+    <section id="projects" style="background:#e2e2ff;">
+        <h2>Projects</h2>
+        <p>Some of my best work is showcased here.</p>
+    </section>
+
+    <section id="contact" style="background:#ffe9e9;">
+        <h2>Contact</h2>
+        <p>You can contact me anytime through email or LinkedIn.</p>
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            $("section:first").addClass("visible");
+        });
+
+        $(window).on("scroll", function () {
+            $("section").each(function () {
+                const top = $(this).offset().top;
+                const scrollPos = $(window).scrollTop() + $(window).height() - 100;
+
+                if (scrollPos > top) {
+                    $(this).addClass("visible");
+                }
+            });
+        });
+
+        $(".nav-btn").click(function () {
+            const target = $($(this).data("target"));
+
+            $("html, body").animate({
+                scrollTop: target.offset().top
+            }, 600, function () {
+                target.addClass("visible");
+            });
+        });
+    </script>
+
+</body>
+</html>
