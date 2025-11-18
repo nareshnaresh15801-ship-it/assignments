@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON.parse Example</title>
+</head>
+<body>
+  <script>
+    const student = {
+      name: "Naresh V",
+      course: "JavaScript",
+      score: 95
+    };
+
+    localStorage.setItem("studentData", JSON.stringify(student));
+
+    const jsonData = localStorage.getItem("studentData");
+
+    const parsedData = JSON.parse(jsonData);
+
+    console.log(parsedData);
+    console.log("Name:", parsedData.name);
+    console.log("Course:", parsedData.course);
+    console.log("Score:", parsedData.score);
+  </script>
+</body>
+</html>
