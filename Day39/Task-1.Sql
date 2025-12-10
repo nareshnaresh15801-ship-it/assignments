@@ -1,0 +1,11 @@
+DELIMITER $$
+
+CREATE PROCEDURE GetAllStudents()
+BEGIN
+    SELECT * FROM Students;
+END $$
+
+DELIMITER ;
+
+
+CALL GetAllStudents();
