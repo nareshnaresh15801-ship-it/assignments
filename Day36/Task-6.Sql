@@ -1,0 +1,12 @@
+DELIMITER $$
+
+CREATE FUNCTION months_old(birthdate DATE)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    RETURN TIMESTAMPDIFF(MONTH, birthdate, CURDATE());
+END $$
+
+DELIMITER ;
+
+SELECT months_old('2005-06-15') AS age_in_months;
