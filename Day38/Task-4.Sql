@@ -1,0 +1,1 @@
+SELECT get_total_price(5, 199.99) AS total_price;
